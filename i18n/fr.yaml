@@ -1,0 +1,64 @@
+# Content
+- id: dateFormat
+  translation: "02 January 2006"
+- id: shortdateFormat
+  translation: "2 Jan, 2006 15:04:05"
+- id: postedOnDate
+  translation: "Ecrit le {{ .Count }}"
+- id: lastModified
+  translation: "(Dernière modification le {{ .Count }})"
+- id: translationsLabel
+  translation: "Autres langues: "
+- id: translationsSeparator
+  translation: ", "
+- id: readMore
+  translation: "Voir davantage"
+- id: olderPosts
+  translation: "Anciens articles"
+- id: newerPosts
+  translation: "Nouveaux articles"
+- id: previousPost
+  translation: "Article précédent"
+- id: nextPost
+  translation: "Article suivant"
+- id: readTime
+  translation: "minutes"
+- id: words
+  translation: "mots"
+
+
+# 404 page
+- id: pageNotFound
+  translation: "Ourp, cette page n'existe pas. (erreur 404)"
+
+# Footer
+- id: poweredBy # Accepts HTML
+  translation: 'Cabure avec <a href="http://gohugo.io">Hugo</a>&nbsp;&bull;&nbsp; Avec le Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+
+# Navigation
+- id: toggleNavigation
+  translation: "Toggle navigation"
+- id: languageSwitcherLabel
+  translation: "Langue"
+- id: gcseLabelShort
+  translation: "Rechercher"
+- id: gcseLabelLong
+  translation: "Rechercher {{ .Site.Title }}"
+- id: gcseClose
+  translation: "Fermer"
+
+# Staticman
+- id: noComment
+  translation: "Pas de commentaire"
+- id: oneComment
+  translation: "commentaire"
+- id: moreComment
+  translation: "commentaires"
+- id: useMarkdown
+  translation: "Vous pouvez utiliser la syntaxe Markdown"
+- id: yourName
+  translation: "Votre nom"
+- id: yourEmail
+  translation: "Votre addresse mail"
+- id: yourWebsite
+  translation: "Votre site web"

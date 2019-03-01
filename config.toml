@@ -1,0 +1,101 @@
+baseurl = "https://101mo.fr.nf/"
+DefaultContentLanguage = "fr"
+
+title = "Sans Un Mot"
+theme = "beautifulhugo"
+
+metaDataFormat = "yaml"
+pygmentsStyle = "trac"
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+#pygmentsUseClassic = true
+#pygmentOptions = "linenos=inline"
+#disqusShortname = "XXX"
+#googleAnalytics = "XXX"
+
+disableKinds = ["section"]
+
+[Params]
+  subtitle = "... l'errance"
+  logo = "img/avatar-icon.jpg"
+  favicon = "img/favicon.ico"
+  dateFormat = "02 January 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  useHLJS = true
+  
+#  url_admin = "http://compostellaire.zici.fr/ecriture_libre/"
+  
+#  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+[[Params.bigimg]]
+  src = "img/grunge_patterns_0.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_1.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_2.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_3.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_4.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_5.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_6.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_7.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_8.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_9.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_10.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_11.jpg"
+[[Params.bigimg]]
+  src = "img/grunge_patterns_12.jpg"
+
+#[[Params.bigimg]]
+#  src = "img/sphere.jpg"
+#  desc = "Sphere"
+  # position: see values of CSS background-position.
+#  position = "center top"
+
+[Author]
+#  name = "yaa"
+  email = "yaa (a) disroot.org"
+
+
+[[menu.main]]
+    name = "Archives"
+    url = "archives"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags"
+    weight = 3
+
+[[menu.main]]
+    name = "A propos"
+    url = "apropos"
+    weight = 4
+
+
+[[menu.main]]
+    name = "Contact"
+    url = "contact"
+    weight = 6
+
+# Utile pour la fonction de recherche
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+  archm = "/:year/:month/"
+  archy = "/:year/"

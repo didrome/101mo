@@ -1,0 +1,22 @@
+{{ define "main" }}
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="well">
+
+{{ $archYear := .Date.Format "2006" }}
+{{ $archMonth := .Date.Format "January" }}
+
+<h2>Archives pour {{ index $.Site.Data.mois (printf "%d" .Date.Month) }} {{ $archYear }}</h2>
+
+{{ range where .Site.Pages "Section" "post" }}
+    {{ if and (eq (.Date.Format "2006") $archYear) (eq (.Date.Format "January") $archMonth) }}
+        {{ partial "archives" . }}
+    {{ end }}
+{{ end }}
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

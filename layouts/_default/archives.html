@@ -1,0 +1,27 @@
+{{ define "main" }}
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="well">
+
+<ul class="years post-preview">
+    {{ range where .Site.Pages "Section" "archy" }}
+    {{ $year := .Date.Format "2006" }}
+    <li>
+        <a href="{{ .Permalink }}">{{ $year }}</a>
+        <ul class="months">
+            {{ range where .Site.Pages "Section" "archm" }}
+                {{ if eq (.Date.Format "2006") $year }}
+                    <li><a href="{{ .Permalink }}">{{ index $.Site.Data.mois (printf "%d" .Date.Month) }}</a></li>
+                {{ end }}
+            {{ end }}
+        </ul>
+    </li>
+    {{ end }}
+</ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

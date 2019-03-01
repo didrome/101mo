@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <div role="main" class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="well">
+
+  <div class="my-auto" >
+    <form action="{{ "/search" | absURL }}">
+      <input id="search-query" name="s"/>
+      <input type='submit' value='Chercher' />
+    </form>
+    <div id="search-results">
+     
+    </div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- this template is sucked in by search.js and appended to the search-results div above. So editing here will adjust style -->
+<script id="search-result-template" type="text/x-js-template">
+	<h3>Résultat(s)</h3>
+    <div id="summary-${key}">
+	  <hr>
+		<article class="post-preview">
+			<a href="${link}"><h2 class="post-title">${title}</h2></a>
+			<span class="post-meta"><i class="fa fa-calendar-o"></i>&nbsp;Article publié le ${date}</span>
+			<div class="post-entry">
+				${snippet}
+				<a href="${link}" class="post-read-more">[{{ i18n "readMore" }}]</a>
+			</div>
+			${ isset tags }<span class="post-meta">#${tags}</span>${ end }
+			${ isset categories }<span class="post-meta">Categories: ${categories}</span>${ end }
+		</article>
+    </div>
+</script>
+{{ end }}
